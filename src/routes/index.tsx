@@ -18,7 +18,6 @@ export default component$(() => {
           I am the content 1!
         </CollapsibleContent>
       </Collapsible>
-
       <button
         onClick$={() => {
           openSig.value = !openSig.value;
@@ -26,7 +25,14 @@ export default component$(() => {
       >
         Programmatic toggle
       </button>
-
+      <p>
+        <strong style={{ color: "red" }}>BUG:</strong> Refresh the page and
+        click on programmatic toggle.
+      </p>
+      <p>
+        <strong style={{ color: "red" }}>BUG:</strong> resize the window after
+        closing and opening the collapsible. (content height does not resize)
+      </p>
       <Collapsible>
         <CollapsibleTrigger>Without animation</CollapsibleTrigger>
         <CollapsibleContent>I am the content 2!</CollapsibleContent>

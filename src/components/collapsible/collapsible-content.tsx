@@ -29,12 +29,6 @@ export const CollapsibleContent = component$(
 
       if (!context.contentRef.value) return;
 
-      /* Bug when programmatically opening and closing without an animation. */
-      if (context.initialStateSig.value) {
-        console.log("testt");
-        isAnimatedSig.value = true;
-      }
-
       await context.getContentDimensions$();
 
       /* check if there's a transition or animation */
